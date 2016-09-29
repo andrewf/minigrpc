@@ -10,7 +10,7 @@ def run():
   stub = minigrpc_pb2.MaximsStub(channel)
   response = stub.GetMaxim(minigrpc_pb2.GetMaximRequest(
                 maxim_type=minigrpc_pb2.GetMaximRequest.FOOD))
-  print("Greeter client received: '%s'" % response.maxim)
+  print("Client received: '%s'" % response.maxim)
 
 
 if __name__ == '__main__':

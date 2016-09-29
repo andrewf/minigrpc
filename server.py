@@ -2,16 +2,13 @@
 
 from concurrent import futures
 import time
-
 import grpc
-
 import minigrpc_pb2
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 
 class Maxims(minigrpc_pb2.MaximsServicer):
-
     def GetMaxim(self, request, context):
         combat_maxim = 'Always mind your surroundings.'
         security_maxim = 'Avoid scanf.'

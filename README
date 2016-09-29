@@ -1,0 +1,25 @@
+To use this (assuming you've cd'd into the directory:
+
+0. (optional) make the checkout directory into a virtualenv
+
+  $ virtualenv .
+  $ source bin/activate
+
+1. Install grpc
+
+  $ pip install grpcio grpcio-tools
+
+2. Run code generation step
+
+  $ python gen_code.py
+
+3. Run server and client
+
+  $ python server.py &
+  $ python client.py
+
+Of course you can also simply run the server and client from different
+terminals. You should see a little bit of deep wisdom on the screen, sent
+from the server to the client. If not, something went wrong. If your
+only complaint is that the wisdom isn't deep enough, please do not file a bug.
+

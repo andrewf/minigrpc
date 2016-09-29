@@ -1,7 +1,7 @@
+"""MiniGRPC client"""
+
 from __future__ import print_function
-
 import grpc
-
 import minigrpc_pb2
 
 

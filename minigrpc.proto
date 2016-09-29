@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package minigrpc;
+
+service Maxims {
+    rpc GetMaxim(GetMaximRequest) returns (GetMaximResponse) {}
+}
+
+message GetMaximRequest {
+    enum MaximType {
+        TYPE_NOT_SPECIFIED = 0;
+        COMBAT = 1;
+        SECURITY = 2;
+        FOOD = 3;
+    }
+
+    MaximType maxim_type = 1;
+}
+
+message GetMaximResponse {
+    string maxim = 1;
+}
